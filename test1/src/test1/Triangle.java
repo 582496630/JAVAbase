@@ -47,6 +47,7 @@ public class Triangle {
 	}
 
 	public static void main(String[] args) {
+
 		System.out.println("1、实心正等腰三角形");
 		Triangle.test(args);
 
