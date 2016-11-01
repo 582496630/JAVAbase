@@ -30,15 +30,16 @@ public class ArrayMaxMin {
 		out.println("最大值："+m);
 		out.println("最小值："+n);
 		out.println();
+		
+		
 		//数组排序
 		Arrays.sort(array);
-		
-		//out.println(array);
-		
 		out.println("排序后的数组：");
 		for (int i : array) {
 			out.println(i);
 		}
+		
+		//数组copy
 		int arraycopy[];
 		arraycopy=new int [5];
 		System.arraycopy(array, 2, arraycopy, 1, 3);

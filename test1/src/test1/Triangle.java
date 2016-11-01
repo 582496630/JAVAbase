@@ -21,7 +21,6 @@ public class Triangle {
 
 			System.out.println();
 		}
-
 	}
 
 	public static void test1(String args[]) {
@@ -41,9 +40,29 @@ public class Triangle {
 				System.out.print("*");
 			}
 			System.out.println();
-
 		}
+	}
 
+	public static void test3(String args[]) {
+		int x = 0;
+		x = Integer.parseInt(args[0]);
+
+		for (int i = 0; i < x ; i++) {
+			for (int j = 0; j < 2 * x; j++) {
+				if (j == x-i) {
+					System.out.print("*");
+				} else if (j == 2 * i + 1) {
+					System.out.print("*");
+				} else {
+
+					System.out.print(" ");
+				}
+			}
+			for (int n = i; n == x;) {
+				System.out.println("*");
+			}
+			System.out.println();
+		}
 	}
 
 	public static void main(String[] args) {
@@ -56,6 +75,7 @@ public class Triangle {
 		System.out.println("2、实心倒立等腰三角形");
 		Triangle.test1(args);
 
+		Triangle.test3(args);
 	}
 
 }
