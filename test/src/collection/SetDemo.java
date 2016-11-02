@@ -49,9 +49,11 @@ public class SetDemo {
 		}
 		*/
 		// Set的两种toArray 的用法
+	
 		out.println("Set两种toArray 的用法 比较");
-		for (Integer integer : intset) {
-			out.println(integer);
+		Object[] objects=  intset.toArray();
+		for (Object object : objects) {
+			out.println(object);
 		}
 		out.println(intset);
 		out.println(intset.toArray());
