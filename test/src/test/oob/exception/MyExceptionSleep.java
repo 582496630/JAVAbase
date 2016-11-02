@@ -1,11 +1,10 @@
 package test.oob.exception;
 
-public class ExceptionThrowDemo2 extends Exception {
+public class MyExceptionSleep extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
 
 }
