@@ -2,6 +2,7 @@ package collection;
 
 import java.io.PrintStream;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class SetDemo {
@@ -47,7 +48,7 @@ public class SetDemo {
 			out.println("toArray 容器"+integer);
 		}
 		*/
-		// Set两种toArray 的用法
+		// Set的两种toArray 的用法
 		out.println("Set两种toArray 的用法 比较");
 		for (Integer integer : intset) {
 			out.println(integer);
@@ -67,7 +68,19 @@ public class SetDemo {
 		
 		//out.println(intset.stream());
 	 
-	out.println( intset.iterator());
+	 //包含contains   集合里是否会包含一个数   返回类型为boolean
+	 out.println("intset 集合内是不是包含6:   "+intset.contains(6));
+	 
+	 //iterator  迭代方法  用for 不行，注意是while
+	 
+	 out.println("迭代   iterator:");
+	 Iterator<Integer> iterator = intset.iterator();
+	 
+	while (iterator.hasNext()) {
+		Integer integer = (Integer) iterator.next();
+		
+		out.println( integer);
+	}
 	 
 	}
 
