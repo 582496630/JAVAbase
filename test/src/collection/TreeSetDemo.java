@@ -28,6 +28,41 @@ PrintStream out =System.out;
 		for (Human human : tSet) {
 			out.println(human);
 		}
+		
+		out.println();
+		Human human1 = new Human("ID--08",10);
+		tSet.ceiling(human1);
+		out.println(tSet.ceiling(human1));
+		
+		Human human2 = new Human("ID--05",14);
+		out.println(tSet.ceiling(human2));
+		
+		out.println(tSet.first());
+		out.println(tSet.floor(human2));
+		out.println(tSet.floor(human1));
+		
+		out.println();
+		out.println(tSet.headSet(human2));
+		out.println(tSet.tailSet(human2));
+		out.println();
+		out.println();
+		out.println();
+		out.println();
+		
+		TreeSet<Human> tSet2 = (TreeSet<Human>) tSet.clone();
+		
+		out.println(tSet);
+		out.println(tSet2);
+		
+		for (Human human : tSet2) {
+			
+			human.setAge(250);
+		}
+		out.println();
+		out.println(tSet);
+		out.println(tSet2);
+		
+		
 	}
 
 }

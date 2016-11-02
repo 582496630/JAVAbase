@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 import lombok.Getter;
 import lombok.Setter;
-
+@Setter@Getter
 public class Human implements Comparable<Human>{
   //lombok  根据注解来生成set get
 	private Integer age;
@@ -34,7 +34,7 @@ public class Human implements Comparable<Human>{
 	 */
 	@Override
 	public String toString() {
-		return "Human [age=" + age + ", id=" + id + "]";
+		return "Human [ id=" + id + ", age=" + age+ "]";
 	}
 	public Human(String id,Integer age) {
 		super();
