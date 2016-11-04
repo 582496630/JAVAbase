@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter@Getter
 public class Human implements Comparable<Human>{
   //lombok  根据注解来生成set get
-	private Integer age;
+	Integer age;
 	String  id;
 	String  name;
 	
@@ -41,6 +41,8 @@ public class Human implements Comparable<Human>{
 		this.age = age;
 		this.id = id;
 	}
+	
+	//比较方法语句   compare
 	@Override
 	public int compareTo(Human o) {
 if (this.age.intValue() == o.age.intValue()) {

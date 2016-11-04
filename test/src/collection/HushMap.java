@@ -68,6 +68,12 @@ public class HushMap {
 		hMap.remove(7L);
 		out.println(hMap);
 
+		
+		//put 用法
+		out.println("put 用法，把5 对应的值改为555:");
+		hMap.put(5l, 555);
+		out.println(hMap);
+		
 		// clear 用法
 		hMap.clear();
 		out.println("clear 用法,使用后集合为空");

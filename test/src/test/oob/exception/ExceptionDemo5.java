@@ -22,7 +22,7 @@ public class ExceptionDemo5 {
 	}
 	
 
-	public static void main(String[] args) throws MyExceptionSleep {
+	public static void main(String[] args)  {
 
 		
 /*		System.out.println("输出异常之前2");
@@ -41,7 +41,7 @@ public class ExceptionDemo5 {
 		System.out.println("输出异常之前");
 		try {
 			
-			ExceptionDemo5.throwException1(2);
+			//ExceptionDemo5.throwException1(2);
 			ExceptionDemo5.throwException2(3);
 			
 			//MyExceptionSleep 是Exception的子类，子类可以代替父类的使用，所以Exception的范围更大，
