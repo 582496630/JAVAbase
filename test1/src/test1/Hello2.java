@@ -11,7 +11,7 @@ class Hello2{
 
 
 	
-
+//代码没有达成要求
    
 	
 	public static void main(String[] args) throws IOException  {
@@ -29,7 +29,8 @@ class Hello2{
     	System.out.println(ss);
     br.close();
     	
-    	String REGEX = "(\\d+)#";  
+    	//String REGEX = "[(\\d+)]#";  
+    	String REGEX = "[\\d]{3}#";  
         String INPUT = ss;
     	Pattern p = Pattern.compile(REGEX); 
     	
@@ -38,8 +39,8 @@ class Hello2{
       while (m.find()) {
 		System.out.println(m.group(0));
 		
-		String x = m.group(0);
 	}
+      String x = m.group(0);
       System.out.println(x.toString());
       
       
