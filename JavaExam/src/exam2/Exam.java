@@ -18,6 +18,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class Exam  {
 
+	
 	public static void math() throws Exception{
 		
 		int x,y,z=0,p,max,min,num=0;
