@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript</title>
+
+</head>
+<body >
+<input name="button" type="button" value="点击"    onclick="DialogBox()"/><br/>
+<script type="text/javascript">
+
+var len = navigator.plugins.length;
+with (document)
+{
+	  write("你的浏览器"+len+"种外挂插件:<BR>")
+	  write("<TABLE BORDER=0>")
+	  write("<CAPTION>外挂插件清单</CAPTION>")
+	  write("<TR><TH><TH>名称<TH>描述<TH>文件名")
+	  
+for(var i=0 ;i<len;i++)
+	write("<TR><TD>"+i+"<TD>"+navigator.plugins[i].name+
+			"<TD>"+navigator.plugins[i].description+
+			"<TD>"+navigator.plugins[i].filename);
+	  alert("警告");
+	  }
+
+</script>
+
+
+</body>
+</html>

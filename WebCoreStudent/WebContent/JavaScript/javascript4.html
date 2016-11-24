@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript</title>
+<script  language = "JavaScript">
+function leave(){
+	if(confirm("确定离开吗？")){
+		self.close();
+	}else{
+		return flase;
+	}
+}
+
+
+</script>
+</head>
+<body >
+
+<input name="button" type="button" value="刷新页面"    onclick="location.reload()"/>
+<input name="button" type="button" value="关闭页面"    onclick="leave()"/>
+
+
+</body>
+</html>

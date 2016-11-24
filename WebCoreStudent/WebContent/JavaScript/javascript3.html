@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript</title>
+<script  language = "JavaScript">
+
+function cfm() {
+	if (confirm("确定离开吗")) {
+		//self.close();
+		//window.close;
+		 window.open('', '_self', '');
+         window.close();
+		
+		
+	}else {
+		return false;
+	}
+}
+//for...in   循环
+function dhhd(){
+	var myobject = new Object();
+	myobject.name = "zhouyou";
+	myobject.age = "25";
+	myobject.phone="555 78945"
+	for(prop in myobject){
+		//window.alert("this object  "+prop+" is "+myobject[prop]);
+		document.write("this object  "+prop+" is "+myobject[prop]+"<br/>");
+	}
+}
+
+function hame(e1,e2,e3,e4) {
+	var num = hame.arguments.length;
+	
+		document.write(e1+"<br/>");
+	if (num>1) {
+		document.write(e2+"<br/>");
+	}
+	if (num>2) {
+		document.write(e3+"<br/>");
+	}
+	if (num>3) {
+		document.write(e4+"<br/>");
+	}
+	
+}
+
+function tryCatch() {
+	try {
+		var m = "age";
+		var n = 20;
+		document.write(parseInt(m) + n);
+		//抛出语句
+		throw new Error("not a valid number");
+	} catch (errMsg) {
+		alert(errMsg.message);
+	}
+}
+</script>
+</head>
+<body >
+<input name="button" type="button" value="点击"    onclick="cfm()"/>
+<input name="button" type="button" value="for..in"    onclick="dhhd()"/>
+<input name="button" type="button" value="document.write"   
+ onclick="hame(1,'222','eeee',444)"/>
+
+<input name="button" type="button" value="tryCatch"    onclick="tryCatch()"/>
+
+
+</body>
+</html>

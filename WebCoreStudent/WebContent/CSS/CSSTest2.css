@@ -1,5 +1,32 @@
 @CHARSET "UTF-8";
-    p {color:red;font-size:60px;font-family:楷体
+    p {color:#800080;font-size:20px;font-family:楷体
         }
-
-
+.myclass{
+	font-family:华文行楷;
+	color:#d6e9da;
+	font-weight;
+	font-style:oblique;
+	
+}
+ol li{
+	font-family:隶书;
+	color:#8000ff;
+	font-weight;
+	font-style:italic;
+	vertical-align:middle;
+	
+}
+h1.hh{
+	font-family:隶书;
+	color:red;
+	text-align:center;
+	vertical-align:middle;
+	letter-spacing:5mm;
+}
+.background{
+	background-image:url(../Img/背景1.png);
+	background-repeat:no-repeat;
+	background-position:50%  -100%;
+	
+	
+}

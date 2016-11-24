@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+    
+    h1{
+    color:red;
+    
+    }
+.background1{
+	background-image:url(../Img/背景2.jpg);
+	background-repeat:no-repeat;
+	background-position:50%  0%;
+	
+	
+}
+
