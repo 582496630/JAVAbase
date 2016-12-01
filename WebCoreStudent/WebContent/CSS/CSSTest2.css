@@ -25,8 +25,7 @@ h1.hh{
 }
 .background{
 	background-image:url(../Img/背景1.png);
-	background-repeat:no-repeat;
-	background-position:50%  -100%;
+	background-repeat:repeat;
 	
 	
 }

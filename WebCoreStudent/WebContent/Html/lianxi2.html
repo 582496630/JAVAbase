@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>九九乘法口诀</title>
+</head>
+<link type="text/css" rel="stylesheet" href="lianxi.css">
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+//显示隐藏口诀表的按钮，通过JQuery的toggle方法
+	$(function() {
+		$('#id1').bind('click', function() {
+			$("#did1").toggle('slow', function() {
+
+				if ($('#id1').val() == "九九乘法口诀") {
+					$('#id1').val("隐藏九九乘法口诀")
+				} else {
+					$('#id1').val("九九乘法口诀")
+				}
+			})
+		})
+	})
+	//统计按钮，控制统计结果的显示或隐藏
+	$(function() {
+		$('#id2').bind('click', function() {
+			$("#did2").toggle('slow', function() {
+
+				if ($('#id2').val() == "统计") {
+					$('#id2').val("隐藏")
+				} else {
+					$('#id2').val("统计")
+				}
+			})
+		})
+	})
+$(function(){
+	$('#id3').bind('click',function(){
+		$('#did').attr("class","cssDemo");
+		$('#did1').attr("class","cssDemo1");
+		$('#did2').attr("class","cssDemo2");
+		$('#did3').attr("class","cssDemo3");
+		$('#did4').attr("class","cssDemo4");
+		$('#did5').attr("class","cssDemo5");
+		
+		
+	})
+	
+})
+
+</script>
+
+
+<body>
+	<p>九九乘法口诀</p>
+	<hr />
+	
+	<input id="id1" type="button" value="九九乘法口诀" />
+	<input id="id2" type="button" value="统计" />
+	<input id="id3" type="button" value="样式" />
+	 
+	<br />
+	<div id="did" >
+	<div  id="did1"  style="float:left;display: none;" >
+	<table id="tid1" border="1">
+	</table>
+	</div>
+	<div  id="did2" style="float:left;display: none;">
+	</div>
+
+	
+	<div  style="clear:both;">       </div>
+	
+	</div>
+	
+	<div  id="did3"  >   
+		<div  id="did4"  style="float:left;" >
+	
+	</div>
+	<div  id="did5" style="float:left;">
+	</div>
+
+	
+	
+	    </div>
+	
+
+	
+	
+	
+	
+	<script type="text/javascript">
+		  for (var x = 1; x < 10; x++) {
+				for (var y = 1; y <=x; y++) {
+					 var z=x * y;
+					// var s = y + ' * ' + x + ' = ' + z+'&nbsp';
+					 //$("div").append(s)
+					 $("#did1").append( y + '*' + x + '=' +z+"&nbsp; ")
+					var s=z+z;
+				}
+				
+				$("#did2").append(s)
+				$("#did2").append("&nbsp;")
+				$("#did2").append("<br/>")
+				
+				$("#did4").append("&nbsp; &nbsp;")
+				$("#did4").append(s)
+				$("#did1").append("<br/>")
+			}
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+p {
+	text-align: center;
+	font-family: 华文行楷;
+	color: red;
+	font-weight;
+	font-size:30px;
+}
+
+.cssDemo{
+	margin:0 auto;
+	border:1px solid black;
+	background-color:lightblue;
+	color:red;
+	width:675px;
+	height:170px;
+}
+.cssDemo1{
+margin:0 auto;
+	border-bottom : 1px  solid black;
+	border-right : 1px  solid black;
+	background-color:lightblue;
+	color:red;
+	width:640px;
+	height:170px;
+	
+}
+.cssDemo2{
+	margin:0 auto;
+	border-bottom : 1px  solid black;
+	background-color:lightblue;
+	color:red;
+	text-align:center;
+	width:34px;
+	height:170px;
+	
+}
+.cssDemo3{
+	margin:0 auto;
+	border:1px solid black;
+	background-color:lightblue;
+	color:red;
+	width:675px;
+	height:34px;
+}
+.cssDemo4{
+	margin:0 auto;
+	border-right:1px solid black;
+	background-color:lightblue;
+	color:red;
+	width:641px;
+	height:34px;
+}.cssDemo5{
+	margin:0 auto;
+	border:0px solid black;
+	background-color:lightblue;
+	color:red;
+	width:33px;
+	height:34px;
+}
+
+

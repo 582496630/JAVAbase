@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery</title>
+</head>
+<body>
+	<div>
+		<ol>
+			<li id="one">12345</li>
+			<li class="start">上山打大老虎</li>
+			<li>span</span><span>上山打小老虎</span>>
+			</li>
+			<li class="start">上山打纸老虎</li>
+			<li>上山打老老虎</li>
+		</ol>
+		<ul>
+			<li id="one">12345</li>
+			<li class="start">上山打大猫咪</li>
+			<li>span<span>上山打小猫咪</span></li>
+			<li class="start">上山打纸猫咪</li>
+			<li>上山打老猫咪</li>
+		</ul>
+	</div>
+
+	<p id="pid">锋利的JQuery</p>
+	<p id="p2id"></p>
+	<hr />
+	<div>
+		祖先元素
+		<p>
+			<label>孙元素</label> <span><label>后代元素</label></span>
+		</p>
+		<p>子元素</p>
+
+		<label>zi元素1</label> <label>不加黑<span>zi元素2</span></label> <label>zi元素3</label>
+		<label>zi元素4</label>
+	</div>
+
+	<hr />
+	<p style="display: none;">我是隐藏的</p>
+	<p style="display: none;">我是隐藏的2</p>
+
+	<script type="text/javascript" src="JQuery.js"></script>
+	<script>
+		//$("p").css("color","red").css("background-color","yellow")  //标签选择器
+		//$("#pid").css("background-color","yellow");//id选择器
+		//console.log($("*"));//*选择器，，，把所有的HTML文件内容都输出在控制台
+
+		//$("#p2id").html($("#pid").html());  //把pid的值  赋值p2id标签
+
+		//$(".start").css("font-family","华文行楷");//class类选择器
+		//$(".start,#one").css("background-color","yellow")
+
+		//$("div p").css("color","red")
+		//$("div label").css("color","blue")
+		//$("span label").css("color","blue")  // 祖先后代选择器
+		//$("p>label").css("color","green")    //父子选择器
+		//$("p+label").css("color","green")    //隔壁选择器   只匹配P标签的下一个
+		//$("p ~ label").css("color","green")    //邻居选择器   只匹配P标签的下一个
+		//过滤选择器
+		//$("li:first").css("color","green")  //第一个标签
+		//$("li:last").css("color","red").css("font-size","30px")   //最后一个标签
+		//$("li:first-child").css("color","green")  //第一个标签子元素
+		//$("li:last-child").css("color","red")   //最后一个标签子元素
+
+		//$("li:eq(2)").css("color","blue")//标签下标获取元素
+
+		//$("li:contains(猫咪)").css("font-size","30px")//匹配内容过滤
+		//$("li:has(span)").css("background-color","violet")//深紫purple  浅紫：violet  匹配li元素
+
+		//$("p:hidden").show();//把隐藏属性的P标签显示出来
+		//$("p:visible").hide();//把P标签隐藏
+	</script>
+
+	<input type="text" id="ipt" />
+	<script type="text/javascript">
+		//属性选择器
+		//$("input[id=ipt]").val("Hello")
+	</script>
+	<hr />
+	<form id="my_form">
+		<input type="text" /> <input type="radio" /> <input type="radio"
+			checked="checked" /> <input type="checkbox" /> <input
+			type="checkbox" checked="checked" />
+	</form>
+
+	<script type="text/javascript">
+		//表单选择器  :checked
+		console.log($("#my_form:checked"))
+	</script>
+
+	<select id="sel" multiple="multiple">
+		<option value="0">苹果</option>
+		<option value="1" selected="selected">桔子</option>
+		<option value="2">荔枝</option>
+		<option value="3" selected="selected">葡萄</option>
+		<option value="4">香蕉</option>
+	</select>
+	<script type="text/javascript">
+		//表单选择器  :selected
+		console.log($('#sel :selected'));
+	</script>
+
+
+</body>
+</html>

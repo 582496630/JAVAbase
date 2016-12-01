@@ -3,14 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>javascript</title>
-<script  language = "JavaScript">
-function leave(){
-	if(confirm("确定离开吗？")){
-		self.close();
-	}else{
-		return flase;
-	}
-}
+<script  type="text/javascript"  src="../JavaScript1/JavaScript1.js">
 
 
 </script>
@@ -18,7 +11,30 @@ function leave(){
 <body >
 
 <input name="button" type="button" value="刷新页面"    onclick="location.reload()"/>
-<input name="button" type="button" value="关闭页面"    onclick="leave()"/>
+<input name="button" type="button" value="关闭页面"    onclick="leave() "/><br/>
+
+<form>
+<p>
+<textarea id="textArea"   rows="5" cols="30"></textarea>
+</p>
+
+<input type="submit" value="添加元素" />
+
+
+<input type="button" value="删除" onclick="delNode()"/>
+<input type="button" value="插入" onclick="charu()"/>
+<input type="button" value="替换节点" onclick="tidai()"/>
+<input type="button" value="替换li" onclick="tidai2()"/>
+
+
+</form>
+
+
+<ul id="list">
+<li>学习</li>
+<li>吃饭</li>
+<li>睡觉</li>
+</ul>
 
 
 </body>

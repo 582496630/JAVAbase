@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文本框大小左右移动</title>
+</head>
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+
+
+<body>
+	<div
+		style="position: relative; width: 24px; height: 32px; border: 1px solid red;"></div>
+	<button type="button" id="b1">变大变小</button>
+	<button type="button" id="b2">左右移动</button>
+
+	<script type="text/javascript">
+		$('#b1').bind('click', function() {
+			$('div').animate({
+				width : '240px',
+				height : '320px'
+			}, 3000, function() {
+				$('div').animate({
+					width : '24px',
+					height : '32px'
+				},3000)
+			})
+		});
+
+		$('#b2').bind('click', function() {
+			$('div').animate({
+				left : '+=200px'
+			}, 3000, function() {
+				$('div').animate({
+					left : '-=200px'
+				}, 3000)
+			})
+		});
+	</script>
+
+
+
+</body>
+</html>

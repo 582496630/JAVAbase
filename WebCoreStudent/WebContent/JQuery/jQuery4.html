@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQueryDemo</title>
+<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+<script type="text/javascript">
+	//改变文本框根据focus blur
+	$(function() {
+		function focusDemo() {
+			$(this).css("color", "red")
+			//$(this).css("style", "border: 2px soild blue;")  写法错误
+			$(this).attr('style',
+					'border: 2px solid blue;width: 100px; height: 100px;')
+		}
+		function blurDemo() {
+			$(this).css("color", "green")
+			$(this).attr('style',
+					'border: 2px solid yellow;width: 100px; height: 100px;')
+
+		}
+		$('#tid').focus(focusDemo);
+		$('#tid').blur(blurDemo);
+	});
+	//hover鼠标悬浮方法
+	$(function() {
+		function overDemo() {
+			$(this).val("进入");
+		}
+		function outDemo() {
+			$(this).val("离开");
+		}
+
+		$('#btn').hover(overDemo, outDemo)
+	});
+
+	//两个隐藏显示按钮的方法
+	function hideTest() {
+		$("#did").hide();
+	}
+	function showTest() {
+		$("#did").show();
+	}
+
+	/* 		$('p').toggle('slow',function(){
+				alert("显示成功！")
+			}); */
+	//隐藏显示文本框与按钮一起变动
+	$(function() {
+		$('#b').bind('click', function() {
+			$("#did").toggle('slow', function() {
+
+				//下面两种方法都行；但对应的按钮不一样，注意下
+				/* 	if ($('#b').val()=="隐藏") {
+						$('#b').val("显示")
+					}else{
+						$('#b').val("隐藏")
+						
+					} */
+				if ($('#b').html() == "隐藏") {
+					$('#b').html("显示")
+				} else {
+					$('#b').html("隐藏")
+				}
+			})
+		})
+	})
+</script>
+</head>
+<body>
+<!-- hover鼠标悬浮方法 -->
+	<input id="btn" type="button" value="点我" />
+<br />
+	<!-- 改变文本框根据focus blur -->
+	<input id="tid" type="text" width="100px" value="1123"
+		style="border: 5px solid red; width: 100px; height: 100px;" />
+	<hr />
+	<div id="did">123456789</div>
+
+	<br />
+	<input type="button" value="hide" onclick="hideTest()">
+	<input type="button" value="show" onclick="showTest()">
+
+
+	<!-- <input type="button" value="隐藏" id="b" /> -->
+<!-- 隐藏显示文本框与按钮一起变动 -->
+	<button type="button" id="b">隐藏</button>
+
+</body>
+</html>
