@@ -8,7 +8,7 @@
 <script type="text/javascript"
 	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script type="text/javascript">
-//显示隐藏口诀表的按钮，通过JQuery的toggle方法
+	//显示隐藏口诀表的按钮，通过JQuery的toggle方法
 	$(function() {
 		$('#id1').bind('click', function() {
 			$("#did1").toggle('slow', function() {
@@ -34,80 +34,98 @@
 			})
 		})
 	})
-$(function(){
-	$('#id3').bind('click',function(){
-		$('#did').attr("class","cssDemo");
-		$('#did1').attr("class","cssDemo1");
-		$('#did2').attr("class","cssDemo2");
-		$('#did3').attr("class","cssDemo3");
-		$('#did4').attr("class","cssDemo4");
-		$('#did5').attr("class","cssDemo5");
-		
-		
-	})
-	
-})
+	$(function() {
+		$('#id3').bind('click', function() {
+			$('#did').attr("class", "cssDemo");
+			$('#did1').attr("class", "cssDemo1");
+			$('#did2').attr("class", "cssDemo2");
+			$('#did3').attr("class", "cssDemo3");
+			$('#did4').attr("class", "cssDemo4");
+			$('#did5').attr("class", "cssDemo5");
 
+		})
+
+	})
 </script>
 
 
 <body>
 	<p>九九乘法口诀</p>
 	<hr />
-	
+
 	<input id="id1" type="button" value="九九乘法口诀" />
 	<input id="id2" type="button" value="统计" />
 	<input id="id3" type="button" value="样式" />
-	 
+
 	<br />
-	<div id="did" >
-	<div  id="did1"  style="float:left;display: none;" >
-	<table id="tid1" border="1">
-	</table>
-	</div>
-	<div  id="did2" style="float:left;display: none;">
+	<div id="did">
+		<div id="did1" style="float: left;" >
+		
+		</div>
+		<div id="did2" style="float: left; display: none;"></div>
+
+
+		<div style="clear: both;"></div>
+
 	</div>
 
-	
-	<div  style="clear:both;">       </div>
-	
-	</div>
-	
-	<div  id="did3"  >   
-		<div  id="did4"  style="float:left;" >
-	
-	</div>
-	<div  id="did5" style="float:left;">
+	<div id="did3">
+		<div id="did4" style="float: left;"></div>
+		<div id="did5" style="float: left;"></div>
+
+
+
 	</div>
 
-	
-	
-	    </div>
-	
 
-	
-	
-	
-	
+
+
+
+
 	<script type="text/javascript">
-		  for (var x = 1; x < 10; x++) {
-				for (var y = 1; y <=x; y++) {
-					 var z=x * y;
-					// var s = y + ' * ' + x + ' = ' + z+'&nbsp';
-					 //$("div").append(s)
-					 $("#did1").append( y + '*' + x + '=' +z+"&nbsp; ")
-					var s=z+z;
-				}
-				
-				$("#did2").append(s)
-				$("#did2").append("&nbsp;")
-				$("#did2").append("<br/>")
-				
-				$("#did4").append("&nbsp; &nbsp;")
-				$("#did4").append(s)
-				$("#did1").append("<br/>")
-			}
 	
+	
+	for(var n=0;n<10;n++){	
+				var m=0;
+		for (var x = 1; x < 10; x++) {
+			var s = 0;
+
+			for (var y = 1; y <= x; y++) {
+				var z = x * y;
+				// var s = y + ' * ' + x + ' = ' + z+'&nbsp';
+				//$("div").append(s)
+				$("#did1").append(y + '*' + x + '=' + z + "&nbsp; ")
+
+			
+				
+				//当输出完之后    就无法在进入这个循环了 所以只有45 一个值
+				var l = 1;
+				if(y==l){
+	               m=m+z;
+	               l++;
+	
+}
+				
+				
+				
+				
+				
+				s = s + z;
+			}
+
+			$("#did2").append(s)
+			$("#did2").append("&nbsp;")
+			$("#did2").append("<br/>")
+
+	
+			$("#did1").append("<br/>");
+		}
+			$("#did4").append("&nbsp; &nbsp;");
+			$("#did4").append(m);
+		
+			n=y;
+	}	
+		
 	</script>
 
 </body>
