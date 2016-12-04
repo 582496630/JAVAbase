@@ -8,7 +8,7 @@
 <script type="text/javascript"
 	src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script type="text/javascript">
-	//显示隐藏口诀表的按钮，通过JQuery的toggle方法
+	//显示隐藏乘法口诀表的按钮，通过JQuery的toggle方法
 	$(function() {
 		$('#id1').bind('click', function() {
 			$("#did1,#did").toggle('slow', function() {
@@ -34,6 +34,8 @@
 			})
 		})
 	})
+
+	//样式表的添加
 	$(function() {
 		$('#id3').bind('click', function() {
 			$('#did').attr("class", "cssDemo");
@@ -52,27 +54,30 @@
 <body>
 	<p>九九乘法口诀</p>
 	<hr />
-
+	<!-- 三个控制按钮 -->
 	<input id="id1" type="button" value="九九乘法口诀" />
 	<input id="id2" type="button" value="统计" />
 	<input id="id3" type="button" value="样式" />
 
 	<br />
-	
+
+	<!-- 通过 div 标签控制实现乘法表的输出地方与统计的输出地方 -->
+	<!-- 布局说明：总共6个div标签，did与did3把布局分为上下部分，did1与did2把did分为左右两部分，did4、did5把did3分为左右两部分 -->
 	<div id="did" style="display: none;">
 		<div id="did1" style="float: left; display: none;"></div>
 		<div id="did2" style="float: left; display: none;"></div>
-
+		<!-- 因为用了float: left 使两个div在一行显示之后，必须要用clear: both -->
 		<div style="clear: both;"></div>
-</div>
+	</div>
 
 	<div id="did3" style="display: none;">
 		<div id="did4" style="float: left; display: none;"></div>
 		<div id="did5" style="float: left; display: none;"></div>
-
 	</div>
 
+	<!-- 通过javascript输出九九乘法口诀表 -->
 	<script type="text/javascript">
+		//输出口诀表的FOR循环
 		for (var x = 1; x < 10; x++) {
 			var s = 0;
 
@@ -81,7 +86,7 @@
 				// var s = y + ' * ' + x + ' = ' + z+'&nbsp';
 				//$("div").append(s)
 				$("#did1").append(y + '*' + x + '=' + z + "&nbsp; ")
-
+				//s是每行的统计总数，输出在div2中
 				s = s + z;
 			}
 
@@ -91,7 +96,8 @@
 
 			$("#did1").append("<br/>");
 		}
-			var m = 0;
+		//通过for循环输出每一列的总数y；m是所有算术式值的总和
+		var m = 0;
 		for (a = 1; a < 10; a++) {
 			x = (10 - a) * (9 + a) / 2;
 			y = x * a;
@@ -99,7 +105,6 @@
 			$("#did4").append(y)
 			$("#did4").append("&nbsp;&nbsp;")
 			m = y + m;
-
 		}
 		$("#did5").append(m);
 	</script>
