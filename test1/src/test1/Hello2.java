@@ -1,10 +1,12 @@
 package test1;
+import java.awt.List;
 import java.awt.image.BandCombineOp;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 class Hello2{
@@ -30,18 +32,29 @@ class Hello2{
     br.close();
     	
     	//String REGEX = "[(\\d+)]#";  
-    	String REGEX = "[\\d]{3}#";  
+    	String REGEX = "\\d{3}#{1}";  
         String INPUT = ss;
     	Pattern p = Pattern.compile(REGEX); 
     	
     	
       Matcher m = p.matcher(INPUT);
+      
+      
+      
       while (m.find()) {
-		System.out.println(m.group(0));
+		System.out.println(m.group());
 		
 	}
-      String x = m.group(0);
-      System.out.println(x.toString());
+      
+      
+      ArrayList<String> list = new ArrayList<String>();
+      
+      list.add("222");
+      
+      System.out.println(list.toString());
+     
+      
+ 
       
       
       
