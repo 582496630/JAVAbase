@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>让一个背景图片充满整个网页</title>
+
+<style type="text/css">
+/* 注背景图片不具有伸缩性，img引入的图片可以设置 */
+
+/* .img{
+width: 100%;
+height: 100%;
+} */
+</style>
+
+</head>
+<body class="background">
+	<!-- <img alt="插入图片" src="../Img/背景1.png"> -->
+	
+	
+	<div id="background"
+		style="position: absolute; z-index: -1; width: 100%; height: 100%; top: 0px; left: 0px;">
+		<img src="../Img/背景1.png" width="100%" height="100%" />
+	</div>
+	<div>
+		<p>position: absolute是将div的位置固定的，
+		也就是用浏览器的绝对位置的显示div， 只是浏览器的解释稍微不同</p>
+		<p>Z-index属性决定了一个HTML元素的层叠级别，需要与position属性一起用；z代表z轴</p>
+		<p>通过两种方式，一种是用img 标签把图片引入</p>
+		<p>另一种是通过两个div标签，一个放置用于背景的图片，另一个用于写入文字等网页内容；</p>
+		<p>七种，放置图片的那个div要低一层，用<span style="color: red;">z-index: -1;
+		     </span>
+		  </p>
+	</div>
+
+
+
+
+</body>
+</html>
