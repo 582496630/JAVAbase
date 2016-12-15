@@ -10,12 +10,14 @@
 <body>
 <%-- <c:import url="../Hello.jsp" var="hello" scope="page" />
 ${hello} --%>
-<%-- <c:import url="../Hello.jsp"  /> --%>
+<c:import url="../Hello.jsp"  />
 <%-- <c:import url="http://www.baidu.com" charEncoding="utf-8" /> --%>
-<c:url value="../Hello.jsp"></c:url>
+
+<%-- <c:url value="../Hello.jsp"></c:url>
 <c:url value="../Hello.jsp" var="hello" scope="page"></c:url>
 <a href="${hello }">tiaozhan</a>
 
-<c:redirect url="${hello }"></c:redirect>
+<c:redirect url="${hello }"></c:redirect> --%>
+
 </body>
 </html>

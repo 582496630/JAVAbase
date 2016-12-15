@@ -9,12 +9,32 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-   <context-param>
-<param-name>EL</param-name>
-<param-value>取得web.xml里的配置</param-value>
-</context-param>
-  
-
-
+  <servlet>
+    <servlet-name>ServletDemo</servlet-name>
+    <servlet-class>coo.javaweb.servlet.ServletDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo</servlet-name>
+    <url-pattern>/servlet/ServletDemo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitServletDemo4</servlet-name>
+    <servlet-class>coo.javaweb.servlet.InitServletDemo4</servlet-class>
+    <init-param>
+      <param-name>qwe</param-name>
+      <param-value>连滚键盘</param-value>
+    </init-param>
+    <init-param>
+      <param-name>wer</param-name>
+      <param-value>Q键已扣</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitServletDemo4</servlet-name>
+    <url-pattern>/servlet/InitServletDemo4-2</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>EL</param-name>
+    <param-value>取得web.xml里的配置</param-value>
+  </context-param>
 </web-app>

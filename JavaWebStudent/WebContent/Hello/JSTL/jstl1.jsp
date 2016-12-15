@@ -62,12 +62,23 @@ name2:${name1}
 :${name1}
 </p>
 
+<p>c:catch 抛出异常</p>
+<p>直接输出异常：</p>
+
+<c:catch >
+${10/0}
+</c:catch>
+<p>Infinity：无穷大的意思</p>
+
+<p>EL表达式输出异常信息（正常）</p>
 <c:catch var="errmsg">
 <%
 int result=10/0;
 %>
 </c:catch>
 <p>异常信息:${errmsg}</p>
+
+
 
 </body>
 </html>
