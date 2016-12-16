@@ -9,22 +9,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sun.xml.internal.bind.v2.runtime.Name;
+
 /**
- * Servlet implementation class InitServletDemo4
+ * Servlet implementation class InitServletDemo5
  */
 @WebServlet(
-		urlPatterns = { "/servlet/InitServletDemo4" }, //字符串数组
+		urlPatterns = { "/servlet/InitServletDemo5" }, 
 		initParams = { 
-				@WebInitParam(name = "abc", value = "1234"), 
-				@WebInitParam(name = "zxc", value = "456")
-		})
-public class InitServletDemo4 extends HttpServlet {
+				@WebInitParam(name = "a", value = "java第一次初始化"), 
+			
+		},
+		loadOnStartup=2
+		)
+public class InitServletDemo5 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InitServletDemo4() {
+    public InitServletDemo5() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,13 +37,8 @@ public class InitServletDemo4 extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
+		System.out.println("注释输出参数5："+config.getInitParameter("a"));	
 
-	System.out.println("注释输出参数1："+config.getInitParameter("abc"));
-	System.out.println("注释输出参数2："+config.getInitParameter("zxc"));
-	System.out.println("配置xml文件输出参数1："+config.getInitParameter("qwe"));
-	System.out.println("配置xml文件输出参数2："+config.getInitParameter("wer"));
-	
-	
 	}
 
 	/**

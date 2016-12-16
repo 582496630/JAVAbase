@@ -9,7 +9,7 @@
 <body>
 <p>请输入用户信息</p>
 <br/>
-<form action="<%=request.getContextPath()%>/servlet/DoGetAndDoPost2" method="post">
+<form action="<%=request.getContextPath()%>/servlet/DoGetAndDoPost" method="post">
 
 <p>用户名：<input type="text" name="username" /></p>
 <p>密&nbsp;码：<input type="password" name="password" /></p>

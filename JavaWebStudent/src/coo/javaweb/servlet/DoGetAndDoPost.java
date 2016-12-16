@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class DoGetAndDoPost
  */
-@WebServlet("/servlet/DoGetAndDoPost2")
+@WebServlet("/servlet/DoGetAndDoPost")
 public class DoGetAndDoPost extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,7 +40,7 @@ public class DoGetAndDoPost extends HttpServlet {
 		out.println("<h3>用户信息如下：</h3>");
 		//request.setCharacterEncoding("UTF-8");//传递中文参数乱码解决1 在请求参数前，调用request的setCharacterEncodin方法
 		String username=request.getParameter("username");
-		//String nString= new String(username.getBytes("iso8859-1"),"UTF-8");//传递中文参数乱码解决2 
+		//String nString= new String(username.getBytes("iso8859-1"),"UTF-8");//传递中文参数乱码解决2 如果是获取的值不为乱码，则不需要
 		String password=request.getParameter("password");
 		//String passwd= new String(password.getBytes("iso8859-1"),"UTF-8");
 		if(username==null || username=="")
