@@ -49,17 +49,14 @@ public class OUsernameFilter implements Filter {
 		String name = request.getParameter("username");
 		if (name !=null && !"".equals(name)) {
 			chain.doFilter(request, response);
-			
-			
 		}else{
 			HttpServletResponse response2 = (HttpServletResponse)response;
-		response2.sendRedirect("/JavaWebStudent/filter/loginUsernameLost.html");
-		
+		//response2.sendRedirect("/JavaWebStudent/filter/loginUsernameLost.html");
+		response2.setHeader("refresh", "2,url=/JavaWebStudent/filter/loginUsernameLost.html");
 		}	
 		
 		System.out.println("*****UsernameFilter结束，开始跳转下一个Filter");
 	}
-
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
