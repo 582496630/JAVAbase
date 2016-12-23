@@ -35,7 +35,7 @@ public class OnlineUserList1 implements HttpSessionAttributeListener, HttpSessio
         this.app = arg0.getServletContext();
         this.app.setAttribute("online", new TreeSet());
    }
-    
+  
 	/**
      * @see HttpSessionListener#sessionCreated(HttpSessionEvent)
      */

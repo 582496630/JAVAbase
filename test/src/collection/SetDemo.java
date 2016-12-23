@@ -67,6 +67,9 @@ public class SetDemo {
 		
 		//isEmpty 判断集合是否为空
 	 out.println("isEmpty: "+intset.isEmpty());
+	 intset.add(7);
+	 out.println(intset);
+	 out.println("equal: "+intset.equals("7"));
 		
 		//out.println(intset.stream());
 	 
