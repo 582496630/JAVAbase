@@ -21,7 +21,8 @@ public class ListDemo {
 		strlist.add("55");
 		strlist.add("55");
 		out.println("集合长度： "+strlist.size()+"\n"+"集合内容："+strlist.toString());
-		
+		String string1 = strlist.get(5);
+		out.println(string1);
 		//在指定的地方（索引、指针）插入一个值
 		strlist.add(5, "66");
 		out.println(strlist.toString());
