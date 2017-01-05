@@ -1,10 +1,10 @@
 package com.db.database.driver;
 
+import java.sql.Connection;
+import java.sql.Statement;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
 
 public class ConnectDemo {
 	//声明所需的常量  驱动、数据库地址、用户名、密码
@@ -20,7 +20,7 @@ public class ConnectDemo {
 		//调用Connection 类  建立与数据库的连接
 		Connection conn = (Connection) DriverManager.getConnection(DBURL, DBUSER, DBPWD);
 		//创建执行SQL的语句
-		Statement st = (Statement) conn.createStatement();
+		Statement st = conn.createStatement();
 		String sql = "select * from cv";
 		//处理执行结果
 		ResultSet rs = st.executeQuery(sql);

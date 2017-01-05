@@ -2,19 +2,20 @@ package com.db.database.driver;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.Statement;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
-
+//注意引入的包不要引入错误
 public class ConnectDemo2 {
 	public static  final String DBDRIVER = "com.mysql.jdbc.Driver";
-	public static final String DBURL="jdbc:mysql://localhost:3306/db_one2";
+	//？后面的编码方式是为了确保 内容不乱码
+	public static final String DBURL ="jdbc:mysql://localhost:3306/db_one?useUnicode=true&characterEncoding=UTF-8";
 	public static final String DBUESR = "root";
 	public static final String DBPWD = "root";
 	public static void main(String[] args) throws Exception {
 		Class.forName(DBDRIVER);
-		Connection conn = (Connection) DriverManager.getConnection(DBURL, DBUESR, DBPWD);
-		Statement st = (Statement) conn.createStatement();
+		Connection conn = DriverManager.getConnection(DBURL, DBUESR, DBPWD);
+		Statement st = conn.createStatement();
 		String sql = "select * from 登陆账号";
 		
 		ResultSet rs = st.executeQuery(sql);

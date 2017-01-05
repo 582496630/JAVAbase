@@ -6,6 +6,8 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
+import sun.misc.CharacterEncoder;
+
 public class DeleteDemo2 {
 	public static final String DBDRIVE = "com.mysql.jdbc.Driver";
 	public static final String DBURL = "jdbc:mysql://localhost:3306/db_one";

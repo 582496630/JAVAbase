@@ -27,7 +27,7 @@ public class InsertDemoManyShiWu {
 		int ts[] = prest.executeBatch();
 		conn.rollback();
 		//conn.commit();
-		System.out.println("批量插入数据成功"+ts.toString());
+		System.out.println("批量插入数据成功"+ts.length);
 		
 		prest.close();
 		conn.close();

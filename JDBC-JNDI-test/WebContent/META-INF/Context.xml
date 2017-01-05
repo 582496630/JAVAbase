@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/JDBC-JNDI-test"  
+docBase="F:\workspace\JDBC-JNDI-test" privileged="true" 
+reloadable = "true">
+
+<!-- name、auth、type分别表示web.xml的配置的内容，表示数据源的名字，类型等
+driverClassName 表示获取驱动  驱动在tomcat内
+url、username、password 数据库的地址，用户名、登陆密码
+maxActive 指定数据源最大活动连接数
+maxIdle 指定数据池中最大空闲连接数
+maxWait 指定数据池中最大等待获取连接的客户端的时间 -->
+
+<Resource name="jdbc/jndi" auth="Container"
+    type="javax.sql.DataSource" 
+    driverClassName="com.mysql.jdbc.Driver" 
+    url = "jdbc:mysql://localhost:3306/db_one" 
+    username="root"   password="root"  maxActive = "8" 
+    maxIdle="2"  maxWait="10000" >
+    </Resource>
+</Context>

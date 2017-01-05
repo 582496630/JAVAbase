@@ -32,6 +32,8 @@ public class InsertDemoManyShiWu2 {
 		 //错误引入
 		 prest.executeUpdate(tmp+"('老翁’,'男',92,26,2016);");
 		 
+		 
+		 
 			 conn.commit();
 			 System.out.println("批量插入数据成功");
 		 } catch (Exception e) {
